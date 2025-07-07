@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: development-deployment
+  name: sample-app
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: dev-app
+      app: sample-app-dev
   template:
     metadata:
       labels:
-        app: dev-app
+        app: sample-app-dev
     spec:
       containers:
-      - name: dev-container
-        image: <todo>
+      - name: sample-app
+        image: ghcr.io/hozalex/sample-app:master
         ports:
         - containerPort: 8080
