@@ -3,6 +3,8 @@ kind: Component
 metadata:
   name: sample-app
   description: An example of a go application.
+  annotations:
+    github.com/project-slug: Hozalex/sample-app
 spec:
   type: service
   owner: hozalex@gmail.com

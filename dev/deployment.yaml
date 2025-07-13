@@ -12,8 +12,12 @@ spec:
       labels:
         app: sample-app-dev
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+      
       containers:
       - name: sample-app
         image: ghcr.io/hozalex/sample-app:master
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
