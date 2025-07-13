@@ -5,6 +5,7 @@ metadata:
   description: An example of a go application.
   annotations:
     github.com/project-slug: Hozalex/sample-app
+    backstage.io/kubernetes-id: sample-app
 spec:
   type: service
   owner: hozalex@gmail.com
