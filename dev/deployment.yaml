@@ -6,15 +6,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sample-app-dev
+      app: sample-app
   template:
     metadata:
       labels:
-        app: sample-app-dev
+        app: sample-app
     spec:
       imagePullSecrets:
         - name: ghcr-secret
-      
       containers:
       - name: sample-app
         image: ghcr.io/hozalex/sample-app:master

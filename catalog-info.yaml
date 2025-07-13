@@ -6,6 +6,9 @@ metadata:
   annotations:
     github.com/project-slug: Hozalex/sample-app
     backstage.io/kubernetes-id: sample-app
+    backstage.io/kubernetes-namespace: default
+  tags:
+    - go
 spec:
   type: service
   owner: admins
