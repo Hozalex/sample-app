@@ -8,5 +8,5 @@ metadata:
     backstage.io/kubernetes-id: sample-app
 spec:
   type: service
-  owner: default/admins
+  owner: hozalex:admins
   lifecycle: experimental
