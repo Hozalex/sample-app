@@ -21,14 +21,15 @@ import (
 	"image/color"
 	"image/draw"
 	"image/png"
+	"log"
 	"net/http"
 )
 
 func main() {
 	http.HandleFunc("/blue", blueHandler)
-	fmt.log("Serving blue image on /blue")
+	log.Printf("Serving blue image on /blue")
 	http.HandleFunc("/red", redHandler)
-	fmt.log("Serving red image on /red")
+	log.Printf("Serving red image on /red")
 	http.ListenAndServe(":8080", nil)
 }
 
