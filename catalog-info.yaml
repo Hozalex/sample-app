@@ -10,6 +10,6 @@ metadata:
   tags:
     - go
 spec:
-  type: web
+  type: service
   owner: admins
   lifecycle: experimental
