@@ -11,5 +11,6 @@ metadata:
     - go
 spec:
   type: service
-  owner: admins
-  lifecycle: experimental
+  owner: developers
+  lifecycle: development
+  system: platform
