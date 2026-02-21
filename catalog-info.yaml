@@ -15,4 +15,23 @@ spec:
   owner: developers
   lifecycle: development
   system: platform
-  
+  providesApis:
+    - sample-app-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: sample-app-api
+  description: HTTP API that serves colored PNG images
+  annotations:
+    github.com/project-slug: Hozalex/sample-app
+  tags:
+    - go
+    - rest
+spec:
+  type: openapi
+  lifecycle: development
+  owner: developers
+  system: platform
+  definition:
+    $text: ./openapi.yaml
