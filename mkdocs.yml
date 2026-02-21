@@ -1,0 +1,9 @@
+site_name: sample-app
+site_description: A simple Go HTTP service that serves colored PNG images
+
+nav:
+  - Home: index.md
+  - Deployment: deployment.md
+
+plugins:
+  - techdocs-core
