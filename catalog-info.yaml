@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: sample-app
+  description: A simple Go HTTP service that serves colored PNG images
+  annotations:
+    github.com/project-slug: Hozalex/sample-app
+    backstage.io/kubernetes-id: sample-app
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - go
+spec:
+  type: service
+  lifecycle: production
+  owner: group:default/developers
+  providesApis:
+    - sample-app-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: sample-app-api
+  description: HTTP API that serves colored PNG images
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/developers
+  definition:
+    $text: ./openapi.yaml
