@@ -3,7 +3,9 @@ kind: Component
 metadata:
   name: sample-app
   annotations:
-    github.com/project-slug: hozalex/sample-app
+    github.com/project-slug: Hozalex/sample-app
+    backstage.io/kubernetes-id: sample-app
+    backstage.io/kubernetes-namespace: default
 spec:
   type: service
   lifecycle: experimental
