@@ -20,7 +20,7 @@ spec:
       
       containers:
         - name: sample-app
-          image: ghcr.io/hozalex/sample-app:latest
+          image: ghcr.io/hozalex/sample-app:master
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
