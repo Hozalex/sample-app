@@ -1,5 +1,5 @@
 site_name: sample-app
-site_description: Documentation for sample-app
+site_description: "sample app for fun"
 
 nav:
   - Home: index.md
