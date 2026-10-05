@@ -1,0 +1,44 @@
+openapi: "3.0.3"
+info:
+  title: sample-app API
+  description: HTTP API that serves colored PNG images
+  version: "1.0.0"
+  contact:
+    name: developers
+
+servers:
+  - url: http://localhost:8080
+    description: Local development
+
+paths:
+  /blue:
+    get:
+      summary: Get blue image
+      description: Returns a 100x100 PNG image filled with solid blue color
+      operationId: getBlueImage
+      tags:
+        - images
+      responses:
+        "200":
+          description: A blue PNG image
+          content:
+            image/png:
+              schema:
+                type: string
+                format: binary
+
+  /red:
+    get:
+      summary: Get red image
+      description: Returns a 100x100 PNG image filled with solid red color
+      operationId: getRedImage
+      tags:
+        - images
+      responses:
+        "200":
+          description: A red PNG image
+          content:
+            image/png:
+              schema:
+                type: string
+                format: binary
