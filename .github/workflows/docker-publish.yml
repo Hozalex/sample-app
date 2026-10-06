@@ -6,6 +6,8 @@ name: Docker
 # documentation.
 
 on:
+  # Allows starting the build by hand from the Actions tab
+  workflow_dispatch:
   push:
     branches: [ "master" ]
     # Publish semver tags as releases.
