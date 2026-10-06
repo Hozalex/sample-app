@@ -30,7 +30,21 @@ func main() {
 	log.Printf("Serving blue image on /blue")
 	http.HandleFunc("/red", redHandler)
 	log.Printf("Serving red image on /red")
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", cors(http.DefaultServeMux))
+}
+
+// cors allows requests from any origin and answers preflight requests.
+func cors(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+		w.Header().Set("Access-Control-Allow-Headers", "*")
+		if r.Method == http.MethodOptions {
+			w.WriteHeader(http.StatusNoContent)
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
 }
 
 func blueHandler(w http.ResponseWriter, r *http.Request) {
