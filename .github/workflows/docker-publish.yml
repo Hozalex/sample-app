@@ -12,8 +12,13 @@ on:
     branches: [ "master" ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
+    # Build only when the application code changes (not applied to tag pushes)
+    paths:
+      - main.go
   pull_request:
     branches: [ "master" ]
+    paths:
+      - main.go
 
 env:
   # Use docker.io for Docker Hub if empty
